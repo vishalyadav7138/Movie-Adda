@@ -1,0 +1,34 @@
+<style>
+body{
+    margin: 50px auto;
+    background-color:darkgray;
+    text-align: center;
+}
+li{
+    list-style: none;
+    padding: 20px;
+}
+h1{
+    color: rgb(2, 2, 2);
+    font-size: 50px;
+}
+img{
+    padding: 33px;
+}
+</style>
+
+<h1>Movie ADDA</h1>
+
+<a href="/">Search Again ?</a>
+
+  <% if( data.Response === 'False'){ %>
+     <li>Sorrryy..... <%= data.Error %> with Name <%= search %></li>
+ <% }else{ %>
+    <ul>
+<% data["Search"].forEach(function(movie){ %>
+       <li><strong><%= movie.Title %></strong> -  <%= movie.Year %></li>
+       <img src="<%= movie.Poster %>" alt="">
+       <hr>
+<% }); } %>
+</ul>
+

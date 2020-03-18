@@ -1,0 +1,22 @@
+<style>
+body{
+    margin: 0 auto;
+    background-color:darkgray;
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+h1{
+    color: rgb(2, 2, 2);
+    font-size: 50px;
+}
+</style>
+
+<h1>Welcome to Movie Searcher</h1>
+
+<form action="/search" method="GET">
+     <input type="text" placeholder="Movie Title" name="search">
+     <%# <input type="button" placeholder="Search Movie"> %>
+     <button>Search Movie</button>
+</form>
